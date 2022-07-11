@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
 import SaveNav from './Layouts/SaveNav'
-import axios from 'axios';
-import qs from 'qs';
+import axios from 'axios'
+import qs from 'qs'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function CreateProduct() {
+  const navigate = useNavigate();
 
   const [inputs, setInputs] = useState(() => {})
   const handleChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/add-product', qs.stringify(inputs,  { parseArrays: false }));
-    console.log(inputs);
+    axios.post('http://localhost:8080/add-product', qs.stringify(inputs,  { parseArrays: false })).then(res => {
+      console.log(res.data);
+      navigate('/');
+    })
+    
   }
 
   return (
