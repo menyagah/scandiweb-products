@@ -7,10 +7,11 @@ export default function CreateProduct() {
 
   const [inputs, setInputs] = useState(() => {})
   const handleChange = (e) => {
-    setInputs({ ...inputs, [e.target.name]: e.target.value })
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post('http://localhost:8080/add-product', inputs);
     console.log(inputs);
   }
 
