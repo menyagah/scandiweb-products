@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SaveNav from './Layouts/SaveNav'
 import axios from 'axios';
+import qs from 'qs';
 
 
 export default function CreateProduct() {
@@ -11,7 +12,7 @@ export default function CreateProduct() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/add-product', inputs);
+    axios.post('http://localhost:8080/add-product', qs.stringify(inputs,  { parseArrays: false }));
     console.log(inputs);
   }
 
