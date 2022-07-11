@@ -3,10 +3,16 @@ import SaveNav from './Layouts/SaveNav'
 
 
 export default function CreateProduct() {
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+  
   return (
     <SaveNav>
       <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <table>
           <tbody>
             <tr>
