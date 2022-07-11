@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SaveNav from './Layouts/SaveNav'
 
 
 export default function CreateProduct() {
 
-
+  const [inputs, setInputs] = useState(() => {})
+  const handleChange = (e) => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value })
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(inputs);
   }
-  
+
   return (
     <SaveNav>
       <div>
