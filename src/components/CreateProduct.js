@@ -24,7 +24,7 @@ export default function CreateProduct() {
                 <label> sku: </label>
               </th>
               <td>
-                <input type="text" name="sku" />
+                <input type="text" name="sku" onChange={handleChange}/>
               </td>
             </tr>
             <tr>
@@ -32,7 +32,7 @@ export default function CreateProduct() {
                 <label> name: </label>
               </th>
               <td>
-                <input type="text" name="name" />
+                <input type="text" name="name" onChange={handleChange}/>
               </td>
             </tr>
             <tr>
@@ -40,7 +40,7 @@ export default function CreateProduct() {
                 <label> price: </label>
               </th>
               <td>
-                <input type="text" name="price" />
+                <input type="number" name="price" onChange={handleChange}/>
               </td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@ export default function CreateProduct() {
                 <label> size: </label>
               </th>
               <td>
-                <input type="text" name="size" />
+                <input type="number" name="size" onChange={handleChange}/>
               </td>
             </tr>
             <tr>
