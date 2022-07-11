@@ -1,8 +1,11 @@
 import React from 'react'
+import SaveNav from './Layouts/SaveNav'
+
 
 export default function CreateProduct() {
   return (
-    <div>
+    <SaveNav>
+      <div>
       <form>
         <table>
           <tbody>
@@ -47,5 +50,7 @@ export default function CreateProduct() {
         </table>  
       </form>
     </div>
+    </SaveNav>
+    
   )
 }
