@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SaveNav from './Layouts/SaveNav'
+import axios from 'axios';
 
 
 export default function CreateProduct() {
