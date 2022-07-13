@@ -8,8 +8,5 @@ export default function ListProduct() {
         <h1>Product List</h1>
       </div>
     </AddNav>
-      
-    
-    
   )
 }

@@ -7,15 +7,15 @@ import CreateProduct from './components/CreateProduct';
 function App() {
   return (
     <div className="App">
-      
-  <Router>
-    <div>
-      <Routes>
-      <Route exact path="/" element={<ListProduct/>} />
-      <Route path="/addproduct" element={<CreateProduct/>} />
-      </Routes>
-    </div>
-  </Router>
+
+      <Router>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<ListProduct />} />
+            <Route path="/addproduct" element={<CreateProduct />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
