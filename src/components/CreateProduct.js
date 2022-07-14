@@ -29,8 +29,6 @@ export default function CreateProduct() {
     setTypeInputs({})
   }
 
-
-  console.log(value);
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:8080/add-product', qs.stringify({ ...inputs, ...typeInputs }))
