@@ -28,9 +28,9 @@ export default function ListProduct() {
       <div>
         <h1>Product List</h1>
         {
-          products.map(product => {
+          products.map((product, key) => {
             return (
-              <div key={product.id}>
+              <div key={key}>
                 <h2>Sku: {product.sku}</h2>
                 <p>Name: {product.name}</p>
                 <p>Price: {product.price}$</p>
