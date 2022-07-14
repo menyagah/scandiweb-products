@@ -1,9 +1,11 @@
 import React from 'react';
 import AddNav from './Layouts/AddNav';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function ListProduct() {
 
+  const [products, setProducts] = useState({});
   useEffect(() => {
     getProducts();
   }, []);
