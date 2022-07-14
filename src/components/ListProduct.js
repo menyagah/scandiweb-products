@@ -25,17 +25,17 @@ export default function ListProduct() {
 
   return (
     <AddNav>
-      <div>
-        <h1>Product List</h1>
+      <div className='item-list'>
+
         {
           products.map((product, key) => {
             return (
-              <div key={key}>
-                <h2>Sku: {product.sku}</h2>
-                <p>Name: {product.name}</p>
-                <p>Price: {product.price}$</p>
-                <p> {product.size ? <div>Size: {product.size} MB</div> : null}</p>
-                <p> {product.weight ? <div>Weight: {product.weight} KG</div> : null}</p>
+              <div key={key} className='item-list__cont'>
+                <h4> {product.sku}</h4>
+                <p>{product.name}</p>
+                <p>{product.price}$</p>
+                <p> {product.size ? <div> {product.size}</div> : null}</p>
+                <p> {product.weight ? <div>{product.weight}</div> : null}</p>
                 <p> {product.height || product.width || product.length ? <div>Dimensions: {product.height}x{product.width}x{product.length}</div> : null}</p>
               </div>
             )

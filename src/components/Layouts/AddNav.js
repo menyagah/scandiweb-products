@@ -4,20 +4,21 @@ import { Link } from 'react-router-dom';
 
 export default function AddNav(props) {
   return (
-    <div>
-      <nav>
-        <h1>Product List</h1>
-        <ul>
-          <li>
-            <Link to="/addproduct">Add</Link>
-          </li>
-          <li>
-            <Link to="#">Delete</Link>
-          </li>
-        </ul>
-      </nav>
-      <hr />
-      <div>{props.children}</div>
-    </div>
+    <>
+      <header className='header'>
+        <h2>Product List</h2>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/addproduct">Add</Link>
+            </li>
+            <li>
+              <Link to="#">Delete</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div className='main'>{props.children}</div>
+    </>
   )
 }

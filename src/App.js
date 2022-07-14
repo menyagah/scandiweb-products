@@ -7,7 +7,6 @@ import CreateProduct from './components/CreateProduct';
 function App() {
   return (
     <div className="App">
-
       <Router>
         <div>
           <Routes>
@@ -16,6 +15,11 @@ function App() {
           </Routes>
         </div>
       </Router>
+
+      <footer className='footer'>
+
+        <h4>scandiweb Test</h4>
+      </footer>
     </div>
   );
 }
