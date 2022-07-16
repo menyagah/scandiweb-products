@@ -31,12 +31,17 @@ export default function ListProduct() {
           products.map((product, key) => {
             return (
               <div key={key} className='item-list__cont'>
-                <h4> {product.sku}</h4>
-                <p>{product.name}</p>
-                <p>{product.price}$</p>
-                <p> {product.size ? <div> {product.size}</div> : null}</p>
-                <p> {product.weight ? <div>{product.weight}</div> : null}</p>
-                <p> {product.height || product.width || product.length ? <div>Dimensions: {product.height}x{product.width}x{product.length}</div> : null}</p>
+                <div className='checkbox'>
+                  <input type="checkbox" id="delete" name="delete" value="delete"></input>
+                </div>
+                <div className='data'>
+                  <h4> {product.sku}</h4>
+                  <p>{product.name}</p>
+                  <p>{product.price}$</p>
+                  <p> {product.size ? <div>size: {product.size}</div> : null}</p>
+                  <p> {product.weight ? <div>Weight: {product.weight}</div> : null}</p>
+                  <p> {product.height || product.width || product.length ? <div>Dimensions: {product.height}x{product.width}x{product.length}</div> : null}</p>
+                </div>
               </div>
             )
           })

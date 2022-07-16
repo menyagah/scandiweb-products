@@ -6,7 +6,7 @@ export default function AddNav(props) {
   return (
     <>
       <header className='header'>
-        <h2>Product List</h2>
+        <h1>Product List</h1>
         <nav>
           <ul>
             <li>
