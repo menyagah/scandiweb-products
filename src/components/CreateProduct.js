@@ -113,16 +113,14 @@ export default function CreateProduct() {
                     <option value="dimensions" >Furniture</option>
                   </select>
                 </div>
-                {(errors["size"]) ? <div><p className='errors'>{errors["size"][0]}</p></div> : null}
-                {(errors["weight"]) ? <div><p className='errors'>{errors["weight"][0]}</p></div> : null}
-                {(errors["height"]) ? <div><p className='errors'>{errors["height"][0]}</p></div> : null}
+                {(errors["size"]) ? <div><p className='errors'>{errors["size"][1]}</p></div> : null}
 
               </td>
             </tr>
             {(value) === 'dvd' ? <tr>
               <th>
                 <div id="my-forms">
-                  <label> size : </label>
+                  <label> Size (MB) </label>
                 </div>
               </th>
               <td>
@@ -130,7 +128,6 @@ export default function CreateProduct() {
                   <div id="size">
                     <input name="size" id='size' onChange={handleTypeChange} />
                     {(errors["size"]) ? <div><p className='errors'>{errors["size"][0]}</p></div> : null}
-                    {(errors["size"]) ? <div>{errors["size"][1]}</div> : null}
                   </div>
                 </div>
 
@@ -140,7 +137,7 @@ export default function CreateProduct() {
             {(value) === 'book' ? <tr>
               <th>
                 <div id="my-forms">
-                  <label> weight : </label>
+                  <label> Weight (KG) </label>
                 </div>
               </th>
               <td>
@@ -160,7 +157,7 @@ export default function CreateProduct() {
                 <tr>
                   <th>
                     <div id="my-forms">
-                      <label> height : </label>
+                      <label> Height (CM) </label>
                     </div>
                   </th>
                   <td>
@@ -179,7 +176,7 @@ export default function CreateProduct() {
                 <tr>
                   <th>
                     <div id="my-forms">
-                      <label> width : </label>
+                      <label> Width (CM) </label>
                     </div>
                   </th>
                   <td>
@@ -197,7 +194,7 @@ export default function CreateProduct() {
                 <tr>
                   <th>
                     <div id="my-forms">
-                      <label> length : </label>
+                      <label> Length (CM) </label>
                     </div>
                   </th>
                   <td>
