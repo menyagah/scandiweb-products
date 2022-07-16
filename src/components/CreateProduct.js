@@ -16,11 +16,12 @@ export default function CreateProduct() {
   const handleChange = (e) => {
 
     setInputs({ ...inputs, [e.target.name]: e.target.value });
+    setErrors([]);
   }
 
   const handleTypeChange = (e) => {
-
     setTypeInputs({ ...typeInputs, [e.target.name]: e.target.value });
+    setErrors([]);
   }
 
 
