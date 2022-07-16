@@ -17,7 +17,6 @@ function App() {
       </Router>
 
       <footer className='footer'>
-
         <h4>scandiweb Test</h4>
       </footer>
     </div>

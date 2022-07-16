@@ -6,8 +6,6 @@
   box-sizing: inherit; 
 }
 
-
-
 .App {
   text-align: center;
    font-family: 'Lato', sans-serif;
@@ -137,7 +135,6 @@ textarea:focus, input:focus {
   color: red;
   margin-bottom: 6px;
 }
-
 
 .footer {
   display: flex;
