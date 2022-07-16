@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+/* eslint-disable react/prop-types */
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AddNav(props) {
   return (
     <>
-      <header className='header'>
+      <header className="header">
         <h1>Product List</h1>
         <nav>
           <ul>
@@ -18,7 +18,7 @@ export default function AddNav(props) {
           </ul>
         </nav>
       </header>
-      <div className='main'>{props.children}</div>
+      <div className="main">{props.children}</div>
     </>
-  )
+  );
 }
