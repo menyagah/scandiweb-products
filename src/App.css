@@ -128,12 +128,16 @@ input:focus {
     background-color: #719ECE;
   }
 
+textarea:focus, input:focus {
+    color: #000;
+    border: 1px solid rgb(192, 55, 55); 
+}
+
 .errors, .invalid {
   color: red;
-  border: 1px solid rgb(192, 55, 55);
-  box-shadow: 0 0 10px #2e3842;
   margin-bottom: 6px;
 }
+
 
 .footer {
   display: flex;
