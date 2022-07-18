@@ -73,13 +73,13 @@ export default function ListProduct() {
                 <h4> {product.sku}</h4>
                 <p>{product.name}</p>
                 <p>{product.price}$</p>
-                <p> {product.size ? <div>size: {product.size}</div> : null}</p>
-                <p> {product.weight ? <div>Weight: {product.weight}</div> : null}</p>
+                <p> {product.size ? <div>size: {product.size} MB</div> : null}</p>
+                <p> {product.weight ? <div>Weight: {product.weight} KGs</div> : null}</p>
                 <p>
                   {' '}
                   {product.height || product.width || product.length ? (
                     <div>
-                      Dimensions: {product.height}x{product.width}x{product.length}
+                      Dimensions: {product.height}x{product.width}x{product.length} CM
                     </div>
                   ) : null}
                 </p>
