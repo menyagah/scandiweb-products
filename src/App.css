@@ -3,12 +3,12 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; 
+  box-sizing: inherit;
 }
 
 .App {
   text-align: center;
-   font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -51,7 +51,6 @@ a {
   justify-content: space-between;
   border-bottom: #c7c7c7 solid 0.09px;
   background: rgba(255, 255, 255, 9);
-  
 }
 
 .item-list {
@@ -63,7 +62,7 @@ a {
   margin-top: 60px;
 }
 
-.item-list__cont{
+.item-list__cont {
   display: flex;
   justify-content: space-evenly;
   border: #000 solid 1px;
@@ -75,10 +74,10 @@ a {
 
 .product_form {
   min-width: 250px;
-  position: relative
+  position: relative;
 }
 
-.data{
+.data {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +100,7 @@ a {
   margin-left: 14px;
 }
 
-#delete {
+.delete {
   size: 3px;
   height: 16px;
   display: flex;
@@ -120,7 +119,7 @@ a {
   cursor: pointer;
 }
 
-input{
+.input {
   width: 100%;
   height: 40px;
   border: 1px solid #000;
@@ -131,21 +130,23 @@ input{
 }
 
 input:focus {
-    outline: none !important;
-    border:1px solid blue;
-    box-shadow: 0 0 10px #719ECE;
-  }
-
-  .button:hover {
-    background-color: #719ECE;
-  }
-
-textarea:focus, input:focus {
-    color: #000;
-    border: 1px solid rgb(192, 55, 55); 
+  outline: none !important;
+  border: 1px solid blue;
+  box-shadow: 0 0 10px #719ece;
 }
 
-.errors, .invalid {
+.button:hover {
+  background-color: #719ece;
+}
+
+textarea:focus,
+input:focus {
+  color: #000;
+  border: 1px solid rgb(192, 55, 55);
+}
+
+.errors,
+.invalid {
   color: red;
   margin-bottom: 6px;
 }
@@ -155,9 +156,8 @@ textarea:focus, input:focus {
   justify-content: center;
   align-items: center;
   border-top: rgb(145, 143, 143) solid 1px;
-   
-   width:100%;
-    height: 60px;
-    margin-top: auto;
-}
 
+  width: 100%;
+  height: 60px;
+  margin-top: auto;
+}
