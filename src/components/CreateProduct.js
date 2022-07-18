@@ -69,7 +69,6 @@ export default function CreateProduct() {
                   type="text"
                   className={`input ${errors['sku'] ? 'invalid' : null}`}
                   name="sku"
-                  id="sku"
                   onChange={handleChange}
                 />
                 {errors['sku'] ? (
@@ -88,7 +87,6 @@ export default function CreateProduct() {
                   type="text"
                   className={`input ${errors['name'] ? 'invalid' : null}`}
                   name="name"
-                  id="name"
                   onChange={handleChange}
                 />
                 {errors['name'] ? (
@@ -187,7 +185,6 @@ export default function CreateProduct() {
                           <p className="errors">{errors['weight'][0]}</p>
                         </div>
                       ) : null}
-                      {errors['weight'] ? <div>{errors['weight'][1]}</div> : null}
                     </div>
                   </div>
                 </td>
@@ -211,7 +208,6 @@ export default function CreateProduct() {
                             <p className="errors">{errors['height'][0]}</p>
                           </div>
                         ) : null}
-                        {errors['height'] ? <div>{errors['height'][1]}</div> : null}
                       </div>
                     </div>
                   </td>
@@ -232,7 +228,6 @@ export default function CreateProduct() {
                             <p className="errors">{errors['width'][0]}</p>
                           </div>
                         ) : null}
-                        {errors['width'] ? <div>{errors['width'][1]}</div> : null}
                       </div>
                     </div>
                   </td>
@@ -253,7 +248,6 @@ export default function CreateProduct() {
                             <p className="errors">{errors['length'][0]}</p>
                           </div>
                         ) : null}
-                        {errors['length'] ? <div>{errors['length'][1]}</div> : null}
                       </div>
                     </div>
                   </td>
