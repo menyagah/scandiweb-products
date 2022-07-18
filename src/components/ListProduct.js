@@ -88,6 +88,6 @@ export default function ListProduct() {
           );
         })}
       </div>
-    </AddNav>
+    </>
   );
 }
