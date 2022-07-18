@@ -24,7 +24,7 @@ export default function ListProduct() {
   };
 
   const deleteProduct = () => {
-    axios.post(`http://localhost:8080/products`, qs.stringify({ ids })).then((res) => {
+    axios.post(`https://phpmvc-api.herokuapp.com/products`, qs.stringify({ ids })).then((res) => {
       console.log(res.data);
       window.location.reload();
     });
@@ -33,7 +33,7 @@ export default function ListProduct() {
 
   const getProducts = () => {
     axios
-      .get('http://localhost:8080/products')
+      .get('https://phpmvc-api.herokuapp.com/products')
       .then((res) => {
         setProducts(res.data);
         console.log(res.data);

@@ -28,7 +28,10 @@ export default function CreateProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:8080/add-product', qs.stringify({ ...inputs, ...typeInputs }))
+      .post(
+        'https://phpmvc-api.herokuapp.com/add-product',
+        qs.stringify({ ...inputs, ...typeInputs })
+      )
       .then((res) => {
         if (res.data.errors) {
           setErrors(res.data.errors);
@@ -107,7 +110,7 @@ export default function CreateProduct() {
                   type="number"
                   className={`input ${errors['price'] ? 'invalid' : null}`}
                   name="price"
-                  id='price'
+                  id="price"
                   onChange={handleChange}
                 />
                 {errors['price'] ? (
