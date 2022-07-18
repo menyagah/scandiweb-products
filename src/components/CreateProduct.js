@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import axios from "axios";
-import qs from "qs";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import axios from 'axios';
+import qs from 'qs';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function CreateProduct() {
   const navigate = useNavigate();
@@ -28,15 +28,12 @@ export default function CreateProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "http://localhost:8080/add-product",
-        qs.stringify({ ...inputs, ...typeInputs })
-      )
+      .post('http://localhost:8080/add-product', qs.stringify({ ...inputs, ...typeInputs }))
       .then((res) => {
         if (res.data.errors) {
           setErrors(res.data.errors);
         } else {
-          navigate("/");
+          navigate('/');
         }
       })
       .catch((err) => {
@@ -70,14 +67,14 @@ export default function CreateProduct() {
               <td>
                 <input
                   type="text"
-                  className={errors["sku"] ? "invalid" : null}
+                  className={`input ${errors['sku'] ? 'invalid' : null}`}
                   name="sku"
                   id="sku"
                   onChange={handleChange}
                 />
-                {errors["sku"] ? (
+                {errors['sku'] ? (
                   <div className="invalid">
-                    <p className="errors">{errors["sku"]}</p>
+                    <p className="errors">{errors['sku']}</p>
                   </div>
                 ) : null}
               </td>
@@ -89,14 +86,14 @@ export default function CreateProduct() {
               <td>
                 <input
                   type="text"
-                  className={errors["name"] ? "invalid" : null}
+                  className={`input ${errors['name'] ? 'invalid' : null}`}
                   name="name"
                   id="name"
                   onChange={handleChange}
                 />
-                {errors["name"] ? (
+                {errors['name'] ? (
                   <div>
-                    <p className="errors">{errors["name"]}</p>
+                    <p className="errors">{errors['name']}</p>
                   </div>
                 ) : null}
               </td>
@@ -108,18 +105,18 @@ export default function CreateProduct() {
               <td>
                 <input
                   type="number"
-                  className={errors["price"] ? "invalid" : null}
+                  className={`input ${errors['price'] ? 'invalid' : null}`}
                   name="price"
                   onChange={handleChange}
                 />
-                {errors["price"] ? (
+                {errors['price'] ? (
                   <div>
-                    <p className="errors">{errors["price"][0]}</p>
+                    <p className="errors">{errors['price'][0]}</p>
                   </div>
                 ) : null}
-                {errors["price"] ? (
+                {errors['price'] ? (
                   <div>
-                    <p className="errors">{errors["price"][1]}</p>
+                    <p className="errors">{errors['price'][1]}</p>
                   </div>
                 ) : null}
               </td>
@@ -131,11 +128,7 @@ export default function CreateProduct() {
               </th>
               <td>
                 <div>
-                  <select
-                    className="form-select"
-                    id="productType"
-                    onChange={handleSelect}
-                  >
+                  <select className="form-select" id="productType" onChange={handleSelect}>
                     <option selected disabled>
                       Type switcher
                     </option>
@@ -144,14 +137,14 @@ export default function CreateProduct() {
                     <option value="dimensions">Furniture</option>
                   </select>
                 </div>
-                {errors["size"] ? (
+                {errors['size'] ? (
                   <div>
-                    <p className="errors">{errors["size"][1]}</p>
+                    <p className="errors">{errors['size'][1]}</p>
                   </div>
                 ) : null}
               </td>
             </tr>
-            {value === "dvd" ? (
+            {value === 'dvd' ? (
               <tr>
                 <th>
                   <div id="my-forms">
@@ -161,14 +154,10 @@ export default function CreateProduct() {
                 <td>
                   <div id="my-forms">
                     <div id="size">
-                      <input
-                        name="size"
-                        id="size"
-                        onChange={handleTypeChange}
-                      />
-                      {errors["size"] ? (
+                      <input className="input" name="size" id="size" onChange={handleTypeChange} />
+                      {errors['size'] ? (
                         <div>
-                          <p className="errors">{errors["size"][0]}</p>
+                          <p className="errors">{errors['size'][0]}</p>
                         </div>
                       ) : null}
                     </div>
@@ -177,7 +166,7 @@ export default function CreateProduct() {
               </tr>
             ) : null}
 
-            {value === "book" ? (
+            {value === 'book' ? (
               <tr>
                 <th>
                   <div id="my-forms">
@@ -188,25 +177,24 @@ export default function CreateProduct() {
                   <div id="my-forms">
                     <div id="weight">
                       <input
+                        className="input"
                         name="weight"
                         id="weight"
                         onChange={handleTypeChange}
                       />
-                      {errors["weight"] ? (
+                      {errors['weight'] ? (
                         <div>
-                          <p className="errors">{errors["weight"][0]}</p>
+                          <p className="errors">{errors['weight'][0]}</p>
                         </div>
                       ) : null}
-                      {errors["weight"] ? (
-                        <div>{errors["weight"][1]}</div>
-                      ) : null}
+                      {errors['weight'] ? <div>{errors['weight'][1]}</div> : null}
                     </div>
                   </div>
                 </td>
               </tr>
             ) : null}
 
-            {value === "dimensions" ? (
+            {value === 'dimensions' ? (
               <>
                 <tr>
                   <th>
@@ -217,15 +205,13 @@ export default function CreateProduct() {
                   <td>
                     <div id="my-forms">
                       <div id="height">
-                        <input name="height" onChange={handleChange} />
-                        {errors["height"] ? (
+                        <input className="input" name="height" onChange={handleChange} />
+                        {errors['height'] ? (
                           <div>
-                            <p className="errors">{errors["height"][0]}</p>
+                            <p className="errors">{errors['height'][0]}</p>
                           </div>
                         ) : null}
-                        {errors["height"] ? (
-                          <div>{errors["height"][1]}</div>
-                        ) : null}
+                        {errors['height'] ? <div>{errors['height'][1]}</div> : null}
                       </div>
                     </div>
                   </td>
@@ -240,15 +226,13 @@ export default function CreateProduct() {
                   <td>
                     <div id="my-forms">
                       <div id="width">
-                        <input name="width" onChange={handleChange} />
-                        {errors["width"] ? (
+                        <input className="input" name="width" onChange={handleChange} />
+                        {errors['width'] ? (
                           <div>
-                            <p className="errors">{errors["width"][0]}</p>
+                            <p className="errors">{errors['width'][0]}</p>
                           </div>
                         ) : null}
-                        {errors["width"] ? (
-                          <div>{errors["width"][1]}</div>
-                        ) : null}
+                        {errors['width'] ? <div>{errors['width'][1]}</div> : null}
                       </div>
                     </div>
                   </td>
@@ -263,15 +247,13 @@ export default function CreateProduct() {
                   <td>
                     <div id="my-forms">
                       <div id="length">
-                        <input name="length" onChange={handleChange} />
-                        {errors["length"] ? (
+                        <input className="input" name="length" onChange={handleChange} />
+                        {errors['length'] ? (
                           <div>
-                            <p className="errors">{errors["length"][0]}</p>
+                            <p className="errors">{errors['length'][0]}</p>
                           </div>
                         ) : null}
-                        {errors["length"] ? (
-                          <div>{errors["length"][1]}</div>
-                        ) : null}
+                        {errors['length'] ? <div>{errors['length'][1]}</div> : null}
                       </div>
                     </div>
                   </td>

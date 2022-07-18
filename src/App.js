@@ -1,8 +1,8 @@
-import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ListProduct from "./components/ListProduct";
-import CreateProduct from "./components/CreateProduct";
+import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ListProduct from './components/ListProduct';
+import CreateProduct from './components/CreateProduct';
 
 function App() {
   return (
