@@ -69,6 +69,7 @@ export default function CreateProduct() {
                   type="text"
                   className={`input ${errors['sku'] ? 'invalid' : null}`}
                   name="sku"
+                  id="sku"
                   onChange={handleChange}
                 />
                 {errors['sku'] ? (
@@ -87,6 +88,7 @@ export default function CreateProduct() {
                   type="text"
                   className={`input ${errors['name'] ? 'invalid' : null}`}
                   name="name"
+                  id="name"
                   onChange={handleChange}
                 />
                 {errors['name'] ? (
@@ -105,6 +107,7 @@ export default function CreateProduct() {
                   type="number"
                   className={`input ${errors['price'] ? 'invalid' : null}`}
                   name="price"
+                  id='price'
                   onChange={handleChange}
                 />
                 {errors['price'] ? (
